@@ -13,6 +13,7 @@ export default function ContactPage() {
               <li>Focus your stuff and HR to your business</li>
               <li>Make real-time payout without charges.</li>
             </ul>
+            
             <img src={ContactImage} alt="get-started" />
           </div>
           <form className="referForm">
