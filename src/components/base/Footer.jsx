@@ -4,14 +4,59 @@ import Flag2 from '../../assets/flag_2.svg'
 import Flag3 from '../../assets/flag_3.svg'
 import Flag4 from "../../assets/flag_4.svg";
 
+const footerLinks = [
+  {
+    title: "product",
+    links: [
+      { href: "employer", name: "employer" },
+      { href: "employee", name: "employee" },
+    ],
+  },
+  {
+    title: "company",
+    links: [
+      { href: "about", name: "about us" },
+      { href: "contact", name: "contact us" },
+    ],
+  },
+  {
+    title: "contact",
+    links: [
+      { href: "email", name: "Email: hello@juiceme.io" },
+      { href: "phone", name: "Phone: +256 741 657 535" },
+    ],
+  },
+  {
+    title: "location",
+    countries: [
+      { countryName: "Nigeria", flag: Flag4 },
+      { countryName: "Eswatini", flag: Flag1, comingSoon: true },
+      { countryName: "Uganda", flag: Flag2, comingSoon: true },
+      { countryName: "Usa", flag: Flag3, comingSoon: true },
+    ],
+  },
+  {
+    title: "legal",
+    links: [
+      { href: "terms", name: "terms & conditions" },
+      { href: "privacy", name: "privacy policy" },
+    ],
+  },
+];
+
+const countries = [
+  { countryName: "Nigeria", flag: Flag4 },
+  { countryName: "Eswatini", flag: Flag1, comingSoon: true },
+  { countryName: "Uganda", flag: Flag2, comingSoon: true },
+  { countryName: "Usa", flag: Flag3, comingSoon: true },
+];
+
 export default function Foooter() {
   return (
     <>
       <div className="j_partner">
         <div className="j_partner-content max-w-[25rem] w-full mx-auto">
-          <h3 className="text-white text-center">
-            Partner with Juice Inc
-          </h3>
+          <h3 className="text-white text-center">Partner with Juice Inc</h3>
           <p className="text-white my-3 text-center mb-5">
             Grow your business and become a truly employee centric organization.
           </p>
@@ -20,61 +65,31 @@ export default function Foooter() {
           </button>
         </div>
       </div>
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-content_list">
-            <p>Product</p>
-            <a href="#">Employer</a>
-            <a href="#">Employee</a>
-          </div>
-
-          <div className="footer-content_list">
-            <p>Company</p>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-          </div>
-
-          <div className="footer-content_list">
-            <p>Contact</p>
-            <span>
-              Email:{" "}
-              <a href="#" className="underline">
-                hello@juiceme.io
-              </a>
-            </span>
-            <span>
-              Phone: <a href="#">+256 741 657 535</a>
-            </span>
-          </div>
-
-          <div className="footer-content_list">
-            <p>Location</p>
-            <div className="flex my-1">
-              <img className="mr-2" src={Flag4} alt="flag1" />
-              <span>Nigeria</span>
-            </div>
-            <div className="flex my-1">
-              <img className="mr-2" src={Flag1} alt="flag1" />
-              <span>Eswatini</span>
-            </div>
-            <div className="flex my-1">
-              <img className="mr-2" src={Flag2} alt="flag2" />
-              <span>Uganda</span>
-            </div>
-            <div className="flex my-1">
-              <img className="mr-2" src={Flag3} alt="flag3" />
-              <span>USA</span>
-            </div>
-          </div>
-
-          <div className="footer-content_list">
-            <p>Legal</p>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
+      <footer>
+        <div className="container">
+          <div className="innerContainer">
+            {footerLinks.map(({ title, links, countries }) => (
+              <div key={title}>
+                <h5>{title}</h5>
+                <ul>
+                  {links?.map(({ href, name }) => (
+                    <li key={name}>
+                      <a href={href}>{name}</a>
+                    </li>
+                  ))}
+                  {countries?.map(({ countryName, flag }) => (
+                    <li key={countryName}>
+                      <p>
+                        <img src={flag} alt={countryName} />
+                        {countryName}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-
-        <img className="mx-auto" width="90%" src={Logo4XL} alt="JuiceLogo4XL" />
       </footer>
     </>
   );

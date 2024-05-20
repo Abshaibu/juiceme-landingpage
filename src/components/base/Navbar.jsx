@@ -14,14 +14,17 @@ const countries = [
   { title: "Usa", flag: Flag3, comingSoon: true }
 ];
 
+const headerLinks = ['employer', 'employee', 'about']
+
 export default function Navbar({ link, handleLink }) {
   const [showCountryDropdown, setShowCountryDropdown] = useState(false)
-  useEffect(() => {
-    const menu = document.querySelector('.navbar-right ')
-    menu.classList.toggle('active')
-    window.scrollTo(0, 0)
+  const [showMobileNav, setShowMobileNav] = useState(false);
+  // useEffect(() => {
+  //   const menu = document.querySelector('.navbar-right ')
+  //   menu.classList.toggle('active')
+  //   window.scrollTo(0, 0)
 
-  }, [link])
+  // }, [link])
 
   const toggleMenu = () => {
     const menu = document.querySelector('.navbar-right ')
@@ -30,70 +33,78 @@ export default function Navbar({ link, handleLink }) {
   }
 
   return (
-    <div className="navbar z-50">
-      <div className="logo md:pl-24">
+    <header className="flex items-center">
+      <div className="container">
         <a onClick={() => handleLink("home")} href="#home">
           {" "}
-          <img className="cursor-pointer" src={Logo} alt="Juiceme Logo" />
+          <img src={Logo} alt="logo" />
         </a>
-        <img
-          className="block md:hidden"
-          src={Menu}
-          alt="Menu Logo"
-          onClick={() => toggleMenu()}
-        />
-      </div>
-      <div className="navbar-right">
-        <ul>
-          <li>
-            <a onClick={() => handleLink("employer")} href="#employer">
-              Employer
-            </a>
-          </li>
-          <li>
-            <a onClick={() => handleLink("employee")} href="#employee">
-              Employee
-            </a>
-          </li>
-          <li>
-            <a onClick={() => handleLink("about")} href="#about">
-              About
-            </a>
-          </li>
-        </ul>
-        <button
-          className="getStartedBtn"
-          type="button"
-          onClick={() => handleLink("contact")}
-        >
-          Get Started
-        </button>
-        <div className="relative">
-          <button
-            onClick={() => setShowCountryDropdown((prevState) => !prevState)}
-            className="flagBtn flex items-center justify-center bg-[#FEEBE3]"
-            type="button"
-          >
-            <img src={Flag4} alt="Flag Logo" />
-          </button>
-          <ul
-            className={`countryDropdown py-3 bg-white absolute right-0 border border-[#EDEDED] flex flex-col ${
-              showCountryDropdown ? "show" : null
-            }`}
-          >
-            {countries.map(({ title, flag, comingSoon }) => (
-              <li
-                className={`flex gap-2 items-center ${comingSoon ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                key={title}
-              >
-                <img className="md:block hidden" src={flag} alt={title} />
-                <p>{title}</p>
-                {comingSoon && <span className='bg-primary p-1 text-white text-[0.75rem] font-medium rounded-[4px]'>Coming Soon</span>}
+        <nav className={showMobileNav ? "showNav" : null}>
+          <ul>
+            {headerLinks.map((item, i) => (
+              <li key={i}>
+                <a href={`#${item}`} onClick={() => handleLink(item)}>
+                  {item}
+                </a>
               </li>
             ))}
           </ul>
-        </div>
+          <div className="headerNavBtnContainer flex gap-8">
+            <button
+              className="getStartedBtn"
+              type="button"
+              onClick={() => handleLink("contact")}
+            >
+              get started
+            </button>
+            <div className="relative flex gap-4">
+              <button
+                aria-label="country dropdown button"
+                onClick={() =>
+                  setShowCountryDropdown((prevState) => !prevState)
+                }
+                className="flagBtn flex items-center justify-center bg-[#FEEBE3]"
+                type="button"
+              >
+                <img src={Flag4} alt="Nigeria logo" />
+              </button>
+              <ul
+                className={`countryDropdown py-4 bg-white px-4 absolute right-0 border border-[#EDEDED] items-start flex flex-col ${
+                  showCountryDropdown ? "show" : null
+                }`}
+              >
+                {countries.map(({ title, flag, comingSoon }) => (
+                  <li
+                    className={`flex gap-2 items-center ${
+                      comingSoon ? "cursor-not-allowed" : "cursor-pointer"
+                    }`}
+                    key={title}
+                  >
+                    <img className="md:block hidden" src={flag} alt={title} />
+                    <p>{title}</p>
+                    {comingSoon && (
+                      <span className="bg-primary p-1 text-white text-[0.75rem] font-medium rounded-[4px]">
+                        Coming Soon
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <button
+          className="hidden"
+          type="button"
+          onClick={() => setShowMobileNav(prevState => !prevState)}
+        >
+          <img
+            src={Menu}
+            alt="Menu Logo"
+            onClick={() => toggleMenu()}
+          />
+        </button>
       </div>
-    </div>
+    </header>
   );
 }

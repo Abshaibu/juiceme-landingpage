@@ -1,228 +1,177 @@
-.navbar {
+header {
     position: fixed;
     top: 0;
     left: 0;
-    //
+    z-index: 9999;
+    height: 4.375rem;
     width: 100%;
-    padding: 1rem;
     background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include shadow();
     transition: all 0.5s ease;
+    box-shadow: 0px 2px 0px 0px #00072F1A;
 
-    &-right {
+    .container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        list-style: none;
-        margin-right: 4rem;
-        ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style: none;
-            li {
-                list-style: none;
-                cursor: pointer;
-                margin: 0 0.5rem;
-                padding: 0.5rem 1rem;
 
-                a {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 0.9rem;
-                    color: #000;
-                    transition: all 0.5s ease;
-                    cursor: pointer;
+        a {
+            font-size: 0.875rem;
+            padding: 0.8em 0;
+            text-transform: capitalize;
+            transition: all 0.25s ease;
 
-                    &:hover, &:focus{
-                        color: $orange;
-                    }
-                }
+            &.active, &:hover, &:focus {
+                color: $orange;
             }
         }
 
-        .getStartedBtn {
-            width: 7.25rem;
-            height: 2.5rem;
+        nav, ul {
             display: flex;
-            justify-content: center;
+            gap: 2em;
             align-items: center;
-            font-size: 0.9rem;
-            color: #000;
-            transition: all 0.35s ease;
-            cursor: pointer;
-            margin: 0 1em;
-            background: $primary;
-            color: #fff;
-            border: none;
-            border-radius: 10px;
+        }
 
-            &:hover, &:focus {
-                background: $orange;
-            }
+                .countryDropdown {
+                    width: 16rem;
+                    border-radius: 8px;
+                    top: -20em;
+                    z-index: 50;
+                    opacity: 0;
+                    align-items: start;
+                    transition: all 0.5s ease;
+
+                    &.show {
+                        top: 2.8em;
+                        opacity: 1;
+                    }
+
+                    li {
+                        width: 100%;
+                        position: relative;
+                        transition: all 0.25s ease;
+                        span {
+                        position: absolute;
+                        right: 0;
+                        }
+                    }
+                }
+
+        .getStartedBtn {
+            color: #fff;
+            text-transform: capitalize;
+            width: 7.2rem;
+            font-weight: 400;
+            padding: 0.7em 0;
         }
 
         .flagBtn {
-            width: 2.687rem;
-            height: 2.5rem;
-            border-radius: 4px;
-        }
-
-        .countryDropdown {
-            top: 0;
-            width: 16rem;
-            border-radius: 4px;
-            gap: 0.5em;
-            transform: translateY(-13rem);
-            opacity: 0;
-            align-items: unset;
-            &.show {
-            opacity: 1;
-            top: 2.75rem;
-            transform: translateY(0);
-            }
-
-            li {
-                padding: 0.3em 1em;
-                margin: 0;
-                position: relative;
-                transition: all 0.35s ease-in-out;
-                &:hover {
-                    background: #FEEBE3;
-                }
-
-                span {
-                    position: absolute;
-                    right: 1.2em;
-                }
+            width: 43px;
+            height: 38px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            &:hover, &:focus {
+                border: 1px solid $orange;
             }
         }
     }
 
-    @include media("<tablet") {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .logo {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    @media (max-width: 767px) {
+        button.hidden {
+            display: inline-block;
         }
 
-        &-right {
-            width: 100%;
-            display: none;
+        nav, ul {
             flex-direction: column;
-            justify-content: space-between;
-            margin: 0.5rem 0;
-            padding-bottom: 2rem;
-            background: white;
-            transition: all 0.8s ease-in-out;
+        }
 
-            ul {
-                width: 100%;
-                flex-direction: column;
-                align-items: start;
-                justify-content: space-between;
-
-                li {
-                    margin: 0.5rem 0;
-                }
+        nav {
+            position: absolute;
+            background: #fff;
+            left: 0;
+            padding: 2em 0;
+            top: -20em;
+            transition: all 0.5s ease;
+            box-shadow: 0px 2px 0px 0px #00072F1A;
+            width: 100%;
+            &.showNav {
+                top: 4em;
             }
+        }
 
-            button {
-                width: 90%;
-                margin: 0 0.9rem;
-            }
+        div.relative {
+            display: none !important;
+        }
+
+        .headerNavBtnContainer {
+            justify-content: center;
         }
     }
 }
 
-.active {
-    display: flex !important;
+footer {
+    background: url('./../assets/juice_me_footer_logo.svg'), $primary;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 85%;
+    padding-top: 3em;
+    min-height: 26rem;
 
-    @include media("<tablet") {
-        display: block;
-        transition: all 1s ease-in-out;
-        ul {
-            transition: all 0.5s ease-in-out;
-            li {
-                transition: all 0.7s ease-in-out;
-            }
-        }
-    }
-}
-
-.footer {
-    width: 100%;
-    padding: 2rem;
-    background: $primary;
-
-    &-content {
-        width: 60%;
+    .innerContainer {
         display: flex;
-        align-self: center;
         justify-content: space-between;
-        margin: 0 auto;
+        gap: 1.3em;
+        max-width: 75%;
+        margin-left: auto;
+    }
 
-        &_list {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            p {
-                color: $orange;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 128%;
-            }
+    h5 {
+        color: $orange;
+        font-size: 0.875rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
 
-            a {
-                color: #ededed;
-                // font-family: DM Sans;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 128%;
-            }
-            span {
-                color: #ededed;
-                // font-family: DM Sans;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 128%;
-            }
+    a {
+        color: #fff;
+        font-size: 0.875rem;
+        text-transform: capitalize;
+        &:hover {
+            text-decoration: underline;
         }
+    }
 
-        @include media("<tablet") {
-            width: 100%;
+    li {
+        margin-bottom: 0.25em;
+
+        p {
             display: flex;
-            flex-direction: column;
-            align-self: center;
-            justify-content: space-between;
+            gap: 0.5em;
+            color: #fff;
 
-            &_list {
-                margin: 0.5rem 0;
-                p {
-                    margin: 0.5rem 0;
-                }
-
-                a {
-                    margin: 0.5rem 0;
-                }
-                span {
-                    margin: 0.5rem 0;
-                }
+            img {
+                width: 21px;
             }
         }
     }
+
+        @media (max-width: 1440px) {
+            min-height: 20rem;
+
+            .innerContainer {
+                max-width: 100%;
+            }
+        }
+
+                @media (max-width: 767px) {
+                    min-height: 33rem;
+                    .innerContainer {
+                        flex-wrap: wrap;
+                        gap: 2em;
+                        justify-content: space-between;
+                        div {
+                                width: fit-content;
+                            }
+                    }
+                }
 }
