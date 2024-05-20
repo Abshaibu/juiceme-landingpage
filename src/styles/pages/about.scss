@@ -1,335 +1,76 @@
-.j_about {
-    width: 100%;
-    height: 100vh;
-    padding: 2rem 5rem;
+.hero-section {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    .intro-text {
-        color: #000;
-    }
-
-    &-intro {
-        width: 70%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 5rem 0;
-        padding: 0 2rem;
+    .intro-texts {
+        max-width: 31.187rem;
+        width: 100%;
+        h1 {
+            text-align: left;
+        }
         p {
-            font-size: 54px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+            font-size: 1rem;
+            text-align: left;
+            margin: 0 0 1.2em;
         }
 
-        span {
-            color: $orange;
+        button {
+            margin: 3em 0 0;
         }
     }
 
-    &-intro2 {
-        width: 50%;
-        margin: 4rem 0;
-    }
 
-    @include media("<tablet") {
-        width: 100vw;
-        height: auto;
-        flex-direction: column-reverse;
-        justify-content: center;
-        padding: 5rem 0;
-
-        &-intro {
+    .intro-img {
+        img {
+            max-width: 36.5rem;
             width: 100%;
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 2rem 0;
-            padding: 0 2rem;
+        }
+    }
+    @media (max-width: 1260px) {
+        .intro-texts {
+            max-width: 47rem;
             p {
-                font-size: 34px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+                max-width: 45rem;
             }
-
-            span {
-                color: $orange;
             }
-        }
-
-        &-intro2 {
-            display: block;
-            width: fit-content;
-            margin: 1rem;
-        }
-
-        .w-sm {
-            margin: auto 0.5rem;
-            width: 35px;
-            height: 35px;
-        }
-
-        .intro-text {
-            font-weight: 500;
-            font-size: 12px;
-        }
-    }
-}
-
-.j_about_mission {
-    width: 100%;
-    // height: 80vh;
-    padding: 3rem 0.5rem;
-    background-image: url("./../assets/home/mission/rose-petals_bg.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    &-content {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .title {
-            color: $orange;
-            text-align: center;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-
-        .heading {
-            width: 55%;
-            color: $primary;
-            text-align: center;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-    }
-
-    @include media("<tablet") {
-        margin-top: 5rem;
-        padding: 5rem 1rem;
-        height: 100vh;
-        &-content {
-            padding: 2rem 0;
-
-            .heading {
-                width: 100%;
-                font-size: 22px;
-            }
-        }
-    }
-}
-
-.j_about_values {
-    width: 100%;
-    height: 40vh;
-    padding: 2rem 4rem;
-    // display: flex;
-    // justify-content: center;
-
-    h2 {
-        color: $black;
-
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: -1.92px;
-    }
-
-    &-content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin: 2rem 0;
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            width: 30%;
-            height: 200px;
-            padding: 2rem;
-            border-radius: 0.5rem;
-
-            span {
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 156%;
-            }
-        }
-    }
-
-    @include media("<tablet") {
-        height: auto;
-        padding: 2rem 1rem;
-
-        h2 {
-            font-size: 22px;
-        }
-
-        &-content {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin: 2rem 0;
-
-            .card {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-                span {
-                    font-size: 14px;
+        .intro-img {
+                    margin: 3em auto 0;
+                img {
+                    margin: 0 auto;
                 }
             }
-        }
     }
 }
 
-.j_about_mission_2 {
-    width: 100%;
-    height: 40vh;
-    padding: 0.5rem;
-    margin-top: 10rem;
-    background-image: url("./../assets/home/mission/rose-petals_bg.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.landscapeSection {
+    margin: 3em auto 12em;
 
-    &-content {
-        width: 50%;
-        padding: 2rem;
-        display: flex;
+    li {
         flex-direction: column;
-        align-items: center;
-
-        .desc {
-            margin: 1rem 0;
-            color: $black;
-            text-align: center;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
-        .heading {
-            width: 55%;
-            color: $primary;
-            text-align: center;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
+        max-width: 15rem;
     }
-
-    @include media("<tablet") {
-        height: auto;
-        margin-top: 3rem;
-        padding: 5rem 1rem;
-        &-content {
-            width: 100%;
-            padding: 2rem 0;
-
-            .heading {
-                width: 100%;
-                font-size: 22px;
-            }
-        }
-    }
-}
-
-.j_about_team {
-    width: 100%;
-    height: 50vh;
-    padding: 2rem 4rem;
-    margin: 2rem 0;
-    h2 {
-        color: $black;
-
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: -1.92px;
-    }
-
-    &-content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        margin: 2rem 0;
-
-        .card {
+    span {
+        width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: #FEEBE3;
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            width: 25%;
-            // height: 250px;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid #ffece5;
-            background: #fff;
-
-            p {
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 156%;
-            }
-        }
-    }
-
-    @include media("<tablet") {
-        height: auto;
-        padding: 2rem 1rem;
-
-        h2 {
-            font-size: 22px;
-        }
-
-        &-content {
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
-            margin: 2rem 0;
+    }
+}
 
-            .card {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-                span {
-                    font-size: 14px;
-                }
-            }
-        }
+.valuesContainer {
+    background: url('./../assets/rose-petals-small.svg') no-repeat center;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 15em;
+    padding-top: 5em;
+    h2 {
+        max-width: 50rem;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto 2.5em;
     }
 }

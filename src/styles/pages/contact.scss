@@ -16,12 +16,14 @@
 
         ul {
             display: block;
+
             li {
                 margin: 0.5rem 0;
-                font-size: 16px;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 156%; /* 24.96px */
+                line-height: 156%;
+                /* 24.96px */
             }
         }
     }
@@ -29,6 +31,7 @@
     &-right {
         width: 40%;
         margin-top: 6rem;
+
         .content {
             width: 100%;
             padding: 2rem;
@@ -49,9 +52,10 @@
                 line-height: normal;
                 margin: 0.5rem;
             }
+
             span {
                 text-align: center;
-                font-size: 16px;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 156%;
@@ -65,23 +69,23 @@
         }
     }
 
-     @include media("<tablet") {
-                width: 100%;
-                padding: 2rem;
-                flex-direction: column;
+    @include media("<tablet") {
+        width: 100%;
+        padding: 2rem;
+        flex-direction: column;
 
-                h1{
-                    font-weight: 700;
-                    font-size: 24px;
-                }
+        h1 {
+            font-weight: 700;
+            font-size: 24px;
+        }
 
-                li{
-                    list-style: outside;
-                    margin-left: .5rem;
-                }
+        li {
+            list-style: outside;
+            margin-left: .5rem;
+        }
 
-                &-right{
-                    width: 100%;
-                }
-            }
+        &-right {
+            width: 100%;
+        }
+    }
 }

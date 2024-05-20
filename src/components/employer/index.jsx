@@ -1,246 +1,231 @@
-// import Layout from '../base/Layout'
-import EmployerIntro from './Intro'
-import EmployerTestimonials from './Testimonials'
-import EmployerServices from './services'
-import DollarSign from '../../assets/employer/ewa/Frame_7556_1.svg'
-import Receipt from '../../assets/employer/ewa/Frame_72556_1.svg'
-import Money from '../../assets/employer/ewa/Frame_7526_1.svg'
-import Chat from '../../assets/employer/ewa/Frame_83783.svg'
-import Payslip from '../../assets/employer/ewa/Frame_1326.svg'
-import TimeSheet from '../../assets/employer/ewa/Frame_7783.svg'
-import EmployerAccess from '../../assets/employer/Frame_7659.png'
-import JuciePortal from '../../assets/employer/Frame_7662.png'
-import ThereMore from '../../assets/employer/Frame_7664.png'
+import HeroImage from "../../assets/employer/heroImg.png";
+import MoreImage from "../../assets/employer/more_from_juiceme_image.png";
+import JuicePortal from "../../assets/employer/juice_portal_image.png";
+import Values from "../../components/values";
+import Industires from "../../components/industries";
+import Card from "../../assets/employer/card.svg";
+import Wallet from "../../assets/employer/wallet.svg";
+import NotAllowed from "../../assets/employer/not_allowed.svg";
+import UserCheck from "../../assets/employer/user_check.svg";
+import Ewa from "../../assets/employer/wage_access_image.png";
+import NoCash from "../../assets/employer/no_money.svg";
+import Quote from "../../assets/employer/quote.svg";
+import Cash from "../../assets/employer/cash.svg";
+import SendSlip from "../../assets/employer/send_slips.svg";
+import RecordHistory from "../../assets/employer/record_history.svg";
+import MessageIcon from "../../assets/employer/message.svg";
+import Security from "../../assets/employer/security.svg";
+import Cutlery from "../../assets/employer/cutlery.svg";
+import Shop from "../../assets/employer/shop.svg";
+import ConstructionWorkerIcon from "../../assets/employer/construction_worker.svg";
 
-//
-import User from '../../assets/employer/ewa/Frame_7556.svg'
-import Withdrawal from '../../assets/employer/ewa/Frame_7557.svg'
-import Deduct from '../../assets/employer/ewa/Frame_7557-1.svg'
-import Balance from '../../assets/employer/ewa/Frame_7557-2.svg'
+const values = [
+  {
+    title: "Sign Up",
+    subtext:
+      "Employer add employees in the Juiceme Portal and set the percentage employees can withdraw.",
+    icon: UserCheck,
+  },
+  {
+    title: "Withdraw",
+    subtext:
+      "Employees can withdraw accrued salary at any time using WhatsApp and are charged a once-off withdrawal fee. ",
+    icon: Card,
+  },
+  {
+    title: "Deduct",
+    subtext:
+      "Withdrawn amount is automatically deducted from the employee’s salary at payday and remitted to Juiceme.",
+    icon: NotAllowed,
+  },
+  {
+    title: "Balance",
+    subtext:
+      "Employee receives balance of withdrawn amount from salary at the end of the month.",
+    icon: Wallet,
+  },
+];
 
-const data = [
-  {
-    title: 'Sign Up',
-    desc:
-      'Employer add employees in the Juice Portal and set the percentage employees can withdraw.',
-    icon: User,
-    shadow: `4px 4px 70px 0px rgba(252, 125, 74, 0.10)`,
-    color: '#FC7D4A'
-  },
-  {
-    title: 'Withdraw',
-    desc:
-      'Employees can withdraw accrued salary at any time using WhatsApp and are charged a once-off withdrawal fee. ',
-    icon: Withdrawal,
-    shadow: `4px 4px 70px 0px rgba(240, 5, 231, 0.10)`,
-    color: '#F005E7'
-  },
-  {
-    title: 'Deduct',
-    desc:
-      'Withdrawn amount is automatically deducted from the employee’s salary at payday and remitted to JUICE.',
-    icon: Deduct,
-    shadow: `4px 4px 70px 0px rgba(227, 5, 98, 0.10)`,
-    color: '#E30562'
-  },
-  {
-    title: 'Balance',
-    desc:
-      'Employee receives balance of withdrawn amount from salary at the end of the month.',
-    icon: Balance,
-    shadow: `4px 4px 70px 0px rgba(80, 165, 87, 0.10)`,
-    color: '#50A557'
-  },
-]
+const offerings = [
+  { icon: SendSlip, text: "No changes in your payroll system" },
+  { icon: NoCash, text: "No cost to the employer" },
+  { icon: Cash, text: "No impact in your cashflow" },
+];
 
-export default function EmployeerPage() {
+const moreFromJuiceme = [
+  {
+    heading: "Communication",
+    icon: MessageIcon,
+    text: "Get critical information and surveys delivered to you employees from their favourite app, WhatsApp.",
+  },
+  {
+    heading: "Send payslips",
+    icon: SendSlip,
+    text: "Save cost from printing payslips and deliver secure payslips via WhatsApp.",
+  },
+  {
+    heading: "Time Attendance",
+    icon: RecordHistory,
+    text: "Make it easier to track employee time attendance using WhatsApp.",
+  },
+];
+
+const testimonials = [
+  {
+    text: "Juice has completely transformed our HR operations, offering a captivating transition to the convenience of WhatsApp. It's revolutionized the way we work.",
+    icon: Shop,
+    testifier: "Retail Shop",
+  },
+  {
+    text: "Thanks to Juice, we've bid farewell to manual labor in tracking attendance and printing payslips. This innovation not only saves time but also cuts costs significantly.",
+    icon: Cutlery,
+    testifier: "Restaurant",
+  },
+  {
+    text: "Previously, absenteeism was a struggle. Now, employees are motivated to come to work knowing they can access their salary anytime they need.",
+    icon: ConstructionWorkerIcon,
+    testifier: "Construction Company",
+  },
+  {
+    text: "Our partnership with Juiceme has attracted a surge in job applications, highlighting its necessity in today's workforce.",
+    icon: Security,
+    testifier: "Security Company",
+  },
+];
+
+export default function EmployerPage() {
   return (
     <>
-      <EmployerIntro />
-      <EmployerServices />
-      <section className="j_emr_status">
-        <div className="w-100 flex md:flex-row flex-col justify-center items-center p-4">
-          <div className="md:w-[20%] md:my-auto my-3 flex flex-col justify-center items-center">
-            <p className="text-6xl font-bold my-2">92%</p>
-            <span className="text-center text-sm my-auto">
-              Monthly retention, employees requesting their earned salaries
-            </span>
-          </div>
-          <div className="md:w-[20%] md:my-auto my-3 flex flex-col justify-center items-center">
-            <p className="text-6xl font-bold my-2">76%</p>
-            <span className="text-center text-sm my-auto">
-              Increase in job application
-            </span>
-          </div>
-          <div className="md:w-[20%] md:my-auto my-3 flex flex-col justify-center items-center">
-            <p className="text-6xl font-bold my-2">46%</p>
-            <span className="text-center text-sm my-auto">
-              Reduction in staff turnover
-            </span>
-          </div>
-          <div className="md:w-[20%] md:my-auto my-3 flex flex-col justify-center items-center">
-            <p className="text-6xl font-bold my-2">0</p>
-            <span className="text-center text-sm my-auto">Default rates</span>
-          </div>
-        </div>
-      </section>
-      {/*  */}
-      <section className="j_emr_access">
-        <div className="j_emr_access-left">
-          <span className="title">What is Earned Wage Access?</span>
-          <h2 className="my-4">An incredibly easy solution to roll out</h2>
-          <p className="my-3">
-            Earned Wage Access (EWA) is a financial technology solution that
-            provides employees access to their earned wages outside of their
-            traditional pay cycle. If an employee has worked for 10 days, she
-            should be able to access her 10 days worth of salary. It helps
-            employees reduce the dangers of payday loans and other predatory
-            financial products. These products often target individuals who need
-            quick cash, but come with unfavorable terms. This can result in a
-            cycle of debt that is difficult to break which affects their
-            performance at the workplace.
+      <section className="hero-section container">
+        <div className="intro-texts">
+          <h1>Be the company where people want to work.</h1>
+          <p className="pt-4 !mb-0 !text-[1.5rem]">
+            When employees are financially unwell, productivity, engagement and
+            retention suffer—and so does your business. Juiceme takes the
+            financial stress out of work, so your team can focus on what matters
+            most.
           </p>
-          <h2 className="my-4">
-            Offering Earned Wage Access to your employees is super easy:
-          </h2>
-
-          <div className="flex md:flex-row flex-col my-2">
-            <div className="md:w-[25%] w-100 flex flex-col ">
-              <img
-                className="my-2"
-                width="40px"
-                src={Receipt}
-                alt="receipt-icon"
-              />
-              <span className="text-sm">No changes in your payroll system</span>
-            </div>
-            <div className="md:w-[25%] w-100 md:mx-3 flex flex-col ">
-              <img
-                className="my-2"
-                width="40px"
-                src={DollarSign}
-                alt="dollar-icon"
-              />
-
-              <span className="text-sm">No cost to the employer</span>
-            </div>
-            <div className="md:w-[25%] w-100 md:mx-3 flex flex-col ">
-              <img className="my-2" width="40px" src={Money} alt="money-icon" />
-
-              <span className="text-sm">No impact in your cashflow</span>
-            </div>
-          </div>
+          <button className="flex items-center justify-center text-white getStartedBtn">
+            Request a Demo
+          </button>
         </div>
-        <div className="j_emr_access-right">
-          <img className="my-2" src={EmployerAccess} alt="employer-access" />
+        <div className="intro-img">
+          <img src={HeroImage} alt="header-image" />
         </div>
       </section>
-
-      <section className="j_emr_waw">
-        <h2>How Earned Wage Access Works</h2>
-
-        <div className="j_emr_waw-content">
-          {data.map((item, _) => (
-            <div className="card" key={_ + 1} style={{
-              boxShadow: item.shadow
-            }}>
-              <div className="card-icon">
-                    <img src={item.icon} alt="icon" />
-                  </div>
-                <div className="card-content">
-                  
-                  <div className="card-desc">
-                  <h3 className="my-2"
-                    style={{
-                      color: item.color
-                  }}
-                  >{item.title}</h3>
-                    <p className="my-2">{item.desc}</p>
-                  </div>
-                </div>
+      <section className="overdraftSection">
+        <div className="container">
+          <h2>We are working with partners across different industries</h2>
+          <Industires />
+        </div>
+      </section>
+      <section className="ewa container">
+        <div>
+          <img className="max-w-[32.5rem]" src={Ewa} alt="payday image" />
+        </div>
+        <div className="ewaTexts">
+          <h2>What is Earned Wage Access?</h2>
+          <p>
+            Earned Wage Access allows employees to access their earned wages
+            before the traditional pay cycle. For example, if an employee has
+            worked for 10 days, they can access a percentage of those 10 days'
+            earnings. This helps employees avoid payday loans and other harmful
+            financial products, ensuring financial stability and enhancing
+            workplace performance.
+          </p>
+          <div>
+            <h3>
+              Offering earned wage access to your employees using Juiceme
+              technology is super easy:
+            </h3>
+            <ul className="flex gap-8 flex-wrap">
+              {offerings.map(({ text, icon }) => (
+                <li key={text}>
+                  <span>{<img src={icon} alt={text} />}</span>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div className="container">
+        <Values values={values} title="How Earned Wage Access Works" />
+      </div>
+      <section className="container juicePortal">
+        <label className="text-[#FC6326] text-[1.125rem] mb-3 font-[500] inline-block">
+          The Juice Portal
+        </label>
+        <div className="flex gap-8 flex-wrap flexContainerOne justify-between">
+          <div className="texts">
+            <h2>Easy implementation, go live within minutes</h2>
+            <p>
+              We don't replace your current solution; instead, we enhance it by
+              seamlessly integrating your HR/payroll system with Juiceme or
+              providing Juiceme as a powerful standalone solution.
+            </p>
+            <p>
+              Our system can integrate with any payroll and HR system via API’s
+              or SFTP file exchange.
+            </p>
+            <p>
+              Highly secured, cloud-based platform integrated with WhatsApp to
+              help you manage some of your biggest pain points: productivity,
+              retention, absenteeism, and communication.
+            </p>
+          </div>
+          <div>
+            <img src={JuicePortal} alt="juice portal" />
+          </div>
+        </div>
+        <div className="flex gap-8 flex-wrap-reverse flexContainerTwo justify-between">
+          <div>
+            <img
+              className="max-w-[32.5rem] w-full"
+              src={MoreImage}
+              alt="man holding multiple items"
+            />
+          </div>
+          <div className="texts">
+            <h2>There is more from the Juiceme Portal for companies</h2>
+            <p className="mb-8">
+              Unlock the power of employee’s favourite app and digitalize their
+              HR and Payroll processes:
+            </p>
+            <ul className="flex gap-4 flex-wrap">
+              {moreFromJuiceme.map(({ icon, heading, text }) => (
+                <li key={heading}>
+                  <span>
+                    <img src={icon} alt={heading} />
+                  </span>
+                  <p className="text-[#FC6326] text-[1.125rem] font-[600] mb-2">
+                    {heading}
+                  </p>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="container testimonialsSection">
+        <label className="sectionLabel">testimonials</label>
+        <h2>Here is what industries say about us</h2>
+        <ul className="flex gap-8 flex-wrap">
+          {testimonials.map(({ testifier, icon, text }) => (
+            <li key={text}>
+              <img src={Quote} alt="quote" />
+              <p className="mt-6 mb-16">"{text}"</p>
+              <div className="flex gap-3 items-center">
+                <span>
+                  <img src={icon} alt={testifier} />
+                </span>
+                <p className="font-[600]">{testifier}</p>
               </div>
+            </li>
           ))}
-
-        </div>
+        </ul>
       </section>
-
-      {/* juice-portal */}
-      <section className="j_emr_access md:my-0 my-10">
-        <div className="j_emr_access-left">
-          <span className="title">The Juice Portal</span>
-          <h2 className="my-4">Easy implementation, go live within minutes</h2>
-          <p className="my-3">
-            We don't replace your current solution; instead, we enhance it by
-            seamlessly integrating your HR/payroll system with Juice or
-            providing Juice as a powerful standalone solution.
-            <br />
-            <br />
-            Our system can integrate with any payroll and HR system via API’s or
-            SFTP file exchange.
-            <br />
-            <br />
-            Highly secured, cloud-based platform integrated with WhatsApp to
-            help you manage some of your biggest pain points: productivity,
-            retention, absenteeism, and communication.
-          </p>
-        </div>
-        <div className="j_emr_access-right">
-          <img className="my-2" src={JuciePortal} alt="juice-portal" />
-        </div>
-      </section>
-      {/*  */}
-      {/* juice-portal */}
-      <section className="j_emr_more">
-        <div className="j_emr_more-left">
-          <img className="my-2" src={ThereMore} alt="there-more" />
-        </div>
-        <div className="j_emr_more-right">
-          <h2 className="my-4">There’s More!</h2>
-          <p className="my-3 desc">
-            Employers can opt to use our Juice Portal to digitalize their HR and
-            Payroll processes and pay a SaaS fee per active feature and active
-            user
-          </p>
-
-          <div className="flex md:flex-row flex-col my-2">
-            <div className="w-100 flex flex-col md:my-1 my-3">
-              <img className="my-2" width="40px" src={Chat} alt="chat-icon" />
-              <p className="font-bold text-orange">Communication</p>
-              <span className="text-sm md:my-0 my-2">
-                Get critical information and surveys delivered to you employees
-                from their favorite app, WhatsApp
-              </span>
-            </div>
-            <div className="w-100 md:mx-3 md:my-1 my-3 flex flex-col ">
-              <img
-                className="my-2"
-                width="40px"
-                src={Payslip}
-                alt="payslip-icon"
-              />
-              <p className="font-bold text-orange">Send payslips</p>
-              <span className="text-sm md:my-0 my-2">
-                Save cost from printing payslips and deliver secure payslips via
-                WhatsApp
-              </span>
-            </div>
-            <div className="w-100 md:mx-3 md:my-1 my-3 flex flex-col ">
-              <img
-                className="my-2"
-                width="40px"
-                src={TimeSheet}
-                alt="timesheet-icon"
-              />
-              <p className="font-bold text-orange">Time Attendance</p>
-              <span className="text-sm md:my-0 my-2">
-                Make it easier to track employee time attendance using WhatsApp
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*  */}
-      <EmployerTestimonials />
     </>
-  )
+  );
 }

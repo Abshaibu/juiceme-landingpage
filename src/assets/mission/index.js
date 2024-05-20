@@ -1,0 +1,10 @@
+export { default as Frame1 } from './Frame_7556-1.svg';
+export { default as Frame2 } from "./Frame_7556-2.svg";
+export { default as Frame3 } from "./Frame_7556-3.svg";
+export { default as Frame4 } from "./Frame_7556-4.svg";
+export { default as Frame5 } from "./Frame_7556-5.svg";
+export { default as Frame6 } from "./Frame_7556-6.svg";
+export { default as Frame7 } from "./Frame_7556-7.svg";
+export { default as Frame8 } from "./Frame_7556-8.svg";
+export { default as Frame9 } from "./Frame_7556-9.svg";
+export { default as Frame0 } from "./Frame_7556-0.svg";

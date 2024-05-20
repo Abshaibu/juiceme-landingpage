@@ -1,19 +1,23 @@
-import Logo4XL from '../../assets/Juiceme_Logo@4x1.svg'
+import Logo4XL from '../../assets/juice_me_footer_logo.svg'
 import Flag1 from '../../assets/flag_1.svg'
 import Flag2 from '../../assets/flag_2.svg'
 import Flag3 from '../../assets/flag_3.svg'
+import Flag4 from "../../assets/flag_4.svg";
 
 export default function Foooter() {
   return (
     <>
       <div className="j_partner">
-        <div className="j_partner-content">
-          <h1 className="text-white md:text-4xl text-3xl">Partner with Juice Inc</h1>
-          <p className="text-white md:text-md text-sm font-light my-3 text-center">
-            Grow your business and become a truly employee
-            <br /> centric organization.
+        <div className="j_partner-content max-w-[25rem] w-full mx-auto">
+          <h3 className="text-white text-center">
+            Partner with Juice Inc
+          </h3>
+          <p className="text-white my-3 text-center mb-5">
+            Grow your business and become a truly employee centric organization.
           </p>
-          <button className="p-4 px-10 bg-white hover:bg-black hover:text-white rounded">Book a demo</button>
+          <button className="py-[1.25em] block w-[11.5rem] font-[600] text-[0.875rem] bg-white hover:bg-primary hover:text-white rounded-[10px] mx-auto">
+            Book a demo
+          </button>
         </div>
       </div>
       <footer className="footer">
@@ -33,7 +37,7 @@ export default function Foooter() {
           <div className="footer-content_list">
             <p>Contact</p>
             <span>
-              Email:{' '}
+              Email:{" "}
               <a href="#" className="underline">
                 hello@juiceme.io
               </a>
@@ -45,6 +49,10 @@ export default function Foooter() {
 
           <div className="footer-content_list">
             <p>Location</p>
+            <div className="flex my-1">
+              <img className="mr-2" src={Flag4} alt="flag1" />
+              <span>Nigeria</span>
+            </div>
             <div className="flex my-1">
               <img className="mr-2" src={Flag1} alt="flag1" />
               <span>Eswatini</span>
@@ -69,5 +77,5 @@ export default function Foooter() {
         <img className="mx-auto" width="90%" src={Logo4XL} alt="JuiceLogo4XL" />
       </footer>
     </>
-  )
+  );
 }

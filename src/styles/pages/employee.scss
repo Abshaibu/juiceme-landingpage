@@ -1,253 +1,131 @@
-.j_employee {
-    width: 100%;
-    padding: 0 5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    .intro-text {
-        color: #000;
-    }
-
-    &-intro {
-        width: 70%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 5rem 0;
-        padding: 0 2rem;
-        p {
-            font-size: 54px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            // letter-spacing: -3.24px;
-        }
-
-        span {
-            color: $orange;
-        }
-    }
-    &-intro2 {
-        width: 50%;
-        margin: 4rem 0;
-    }
-
-    @include media("<tablet") {
-        // height:0vh;
-        flex-direction: column-reverse;
-        padding: 0;
-        justify-content: center;
-        padding: 5rem 0;
-
-        &-intro {
-            width: 100%;
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0;
-            padding: 0 2rem;
-            p {
-                font-size: 34px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
-
-            span {
-                // font-weight: 900;
-                color: $orange;
-                // text-transform: uppercase;
-            }
-        }
-
-        &-intro2 {
-            display: block;
-        }
-
-        .w-sm {
-            margin: auto 0.5rem;
-            width: 35px;
-            height: 35px;
-        }
-
-        .intro-text {
-            font-weight: 500;
-            font-size: 12px;
-        }
-    }
-}
-
-.j_employee_mission {
-    width: 100%;
-    height: 40vh;
-    padding: 0.5rem;
-    background-image: url("./../assets/home/mission/rose-petals_bg.png");
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    &-content {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h2 {
-            width: 45%;
+.hero-section {
+    margin-bottom: 5em;
+    button {
+        &.referBtn {
+            border: 1px solid $primary;
+            background: #fff !important;
             color: $primary;
-            text-align: center;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        span {
-            margin: 1rem 0;
-            width: 40%;
-            color: $black;
-            text-align: center;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 156%;
-        }
-    }
-
-    @include media("<tablet") {
-        &-content {
-            h2 {
-                width: 100%;
-                font-size: 26px;
-            }
-            span {
-                width: 100%;
-                font-size: 16px;
+            &:hover {
+            background: $primary !important;
+            color: #fff;
             }
         }
     }
 }
 
-.j_employee_more {
-    width: 100%;
-    height: auto;
-    padding: 2rem 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    &-left {
-        width: 50%;
-        padding: 2rem;
-
-        img {
-            margin: auto;
-        }
-    }
-
-    &-right {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        padding: 2rem;
+.overdraftSection {
+    background: url('./../assets/rose-petals-small.svg') no-repeat center;
+        background-size: cover;
+        background-position: center 1em;
+        margin: 0 auto 15em;
+        padding-top: 9em;
 
         h2 {
-            color: $black;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .desc {
-            width: 80%;
-            color: #000;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 156%;
-        }
-    }
-
-    @include media("<tablet") {
-        width: 100%;
-        height: 100%;
-        padding: 0.2rem;
-        flex-direction: column;
-
-        &-right {
+            text-align: center;
+            max-width: 30rem;
             width: 100%;
-            h2 {
-                font-size: 24px;
-            }
-
-            img {
+            margin: 0 auto;
+        }
+        p {
+            text-align: center;
+                max-width: 40rem;
+                font-size: 1.125rem;
                 width: 100%;
-                width: 50px;
-                height: 50px;
-            }
+                margin: 1.5em auto;
         }
-
-        &-left {
-            width: 100%;
-            img {
-                width: fit-content;
-            }
-        }
-    }
 }
 
-.content-center {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 5rem;
-}
-
-.j_employee_form {
-    width: 500px;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #ffece5;
-    background: #fff;
-    box-shadow: 4px 4px 70px 0px rgba(252, 125, 74, 0.1);
-    display: flex;
-    flex-direction: column;
-    color: $primary;
-
+.walletSection {
     h2 {
-        color: $primary;
-        text-align: center;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin: 0.5rem;
-    }
-    span {
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 156%;
-        margin: 0.5rem;
+        max-width: 45rem;
+            width: 100%;
+            margin: 0 auto 3em;
     }
 
-    @include media("<tablet") {
-        width: 95%;
-        padding: 2rem;
+    .walletHeaderText {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    li {
+        background: #fff;
+        border-radius: 1.5rem;
+        padding: 2em 1.5em;
+        display: block;
+        max-width: 20.437rem;
+        width: 100%;
+        box-shadow: 4px 4px 70px 0px #3535351A;
+                span {
+                    width: 3.5rem;
+                        height: 3.5rem;
+                        border-radius: 50%;
+                        background: #FEEBE3;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 2em;
+                }
+                p {
+                    margin-bottom: 0.5em;
+                }
+    }
+
+    @media (max-width: 1235px) {
+        .walletContainer {
+            flex-direction: column;
+
+            ul {
+                margin-bottom: 12em;
+            }
+
+            .walletImg {
+                max-width: 22rem;
+            }
+        }
+    }
+}
+
+.referCompanyFormContainer {
+    border: 1px solid #FFECE5;
+    border-radius: 8px;
+    background: #fff;
+    padding: 2.06rem;
+    max-width: 36.5rem;
+    width: 100%;
+    margin: 10em auto;
+    box-shadow: 4px 4px 70px 0px #FC7D4A1A;
+    h2 {
+        margin-bottom: 0.4em;
+    }
+    p {
+        text-align: center;
+        max-width: 28rem;
+        width: 100%;
+        margin: 0 auto 3.5em;
+    }
+    .referForm {
+        div {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+        label {
+            flex: 1;
+            font-size: 0.875rem;
+            input {
+                display: block;
+                min-width: 15.625rem;
+                width: 100%;
+                padding: 1.25em 1em;
+                 border: 1px solid $primary;
+                 border-radius: 8px;
+                 font-weight: 600;
+                 outline: none;
+                margin-top: 0.4em;
+                &:hover, &:focus {
+                    border-color: $primary;
+                }
+            }
+        }
     }
 }
