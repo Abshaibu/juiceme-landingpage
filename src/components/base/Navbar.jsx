@@ -35,7 +35,10 @@ export default function Navbar({ link, handleLink }) {
   return (
     <header className="flex items-center">
       <div className="container">
-        <a onClick={() => handleLink("home")} href="#home">
+        <a onClick={() => {
+      setShowMobileNav(false);
+      handleLink("home");
+        }} href="#home">
           {" "}
           <img src={Logo} alt="logo" />
         </a>
@@ -43,7 +46,10 @@ export default function Navbar({ link, handleLink }) {
           <ul>
             {headerLinks.map((item, i) => (
               <li key={i}>
-                <a href={`#${item}`} onClick={() => handleLink(item)}>
+                <a href={`#${item}`} onClick={() => {
+                setShowMobileNav(false);
+                handleLink(item);
+                }}>
                   {item}
                 </a>
               </li>
