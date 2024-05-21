@@ -74,7 +74,7 @@ export default function Foooter() {
                 <ul>
                   {links?.map(({ href, name }) => (
                     <li key={name}>
-                      <a href={href}>{name}</a>
+                      <a href={`#${href}`}>{name}</a>
                     </li>
                   ))}
                   {countries?.map(({ countryName, flag }) => (
