@@ -88,7 +88,7 @@ export default function Navbar() {
             <button
               className="getStartedBtn"
               type="button"
-              onClick={() => handleLink("contact")}
+              onClick={() => navigate("/contact")}
             >
               get started
             </button>
