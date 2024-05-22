@@ -1,19 +1,12 @@
-// import Layout from '../base/Layout'
 import ContactImage from '../../assets/get_started.png'
 
 export default function ContactPage() {
   return (
     <>
       <section className="container pt-28 contactUsSection">
-        <h1>Make Flexible Payouts to your Employees</h1>
-        <div className="flex gap-8 justify-between flex-wrap">
+        <h1>Partner with Juiceme and make anyday payday for your Employees</h1>
+        <div className="flex gap-8 justify-between flex-wrap-reverse">
           <div className='flex-1'>
-            <ul>
-              <li>Connect to Juiceme and start paying advances</li>
-              <li>Focus your stuff and HR to your business</li>
-              <li>Make real-time payout without charges.</li>
-            </ul>
-            
             <img src={ContactImage} alt="get-started" />
           </div>
           <form className="referForm">

@@ -99,7 +99,7 @@ export default function EmployerPage() {
       <section className="hero-section container">
         <div className="intro-texts">
           <h1>Be the company where people want to work.</h1>
-          <p className="pt-4 !mb-0 !text-[1.5rem]">
+          <p className="pt-4 !mb-0">
             When employees are financially unwell, productivity, engagement and
             retention suffer—and so does your business. Juiceme takes the
             financial stress out of work, so your team can focus on what matters
@@ -121,7 +121,7 @@ export default function EmployerPage() {
       </section>
       <section className="ewa container">
         <div>
-          <img className="max-w-[32.5rem]" src={Ewa} alt="payday image" />
+          <img className="max-w-[32.5rem] w-full" src={Ewa} alt="payday image" />
         </div>
         <div className="ewaTexts">
           <h2>What is Earned Wage Access?</h2>

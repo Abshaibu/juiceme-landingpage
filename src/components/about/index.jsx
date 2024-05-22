@@ -25,7 +25,7 @@ const customerCentric = [
     icon: Code,
   },
   {
-    title: "$200 average monthly salary and under a monthly payroll",
+    title: "Less than $150 average monthly salary and under a monthly payroll",
     icon: Id,
   },
   {
@@ -90,7 +90,7 @@ export default function AboutPage() {
             left them vulnerable to predatory credit lenders, perpetuating a
             cycle of financial hardship.
           </p>
-          <p>This is the very reason we started Juice.</p>
+          <p>This is the very reason we started Juiceme.</p>
           <button className="flex items-center justify-center text-white getStartedBtn">
             Join us
           </button>

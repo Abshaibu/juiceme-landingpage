@@ -5,6 +5,7 @@ import JuicemeDashboardImage from "../../assets/home/juiceme_dashboard_image.png
 import PeakProductivityImage from "../../assets/home/peak_productivity_image.png";
 import ElevateMoraleImage from "../../assets/home/elevate_morale_image.png";
 import AttractTalentImage from "../../assets/home/attract_talent_image.png";
+import { useNavigate } from "react-router-dom";
 import RetenEngagementImage from "../../assets/home/engage_retention_image.png";
 import SoftwareAddon from "../../assets/home/software_addon_image.png";
 import Shield from "../../assets/shield.svg";
@@ -33,19 +34,19 @@ const solutions = [
 
 const stats = [
   {
-    figure: "92",
+    figure: "92%",
     subtext: "Monthly retention, employees requesting their earned salaries",
   },
   {
-    figure: "76",
+    figure: "76%",
     subtext: "Increase in job application",
   },
   {
-    figure: "47",
+    figure: "47%",
     subtext: "Reduction in staff turnover",
   },
   {
-    figure: "0",
+    figure: "0%",
     subtext: "Default rates",
   },
 ];
@@ -78,24 +79,28 @@ const leaderCountContent = [
 ];
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <>
       <section className="hero-section container">
         <div className="intro-texts">
           <h1>
-            Do not wait for <span className="">payday</span> to access money you
-            already worked for.
+            Do not wait for <span className="">payday</span>. Turn workdays into paydays - get paid anytime!
             <span className="hidden">Track time attendance</span>
             <span className="hidden">Process pay slips</span>
             <span className="hidden">Send critical information</span>
             <br />
           </h1>
-          <p className="intro-text my-2">
+          <p className="intro-text my-2 pt-4">
             Juiceme gives employees access to their salary for the days they
             worked any time before payday via WhatsApp
             <img src={WhatsAppIcon} alt="whatsapp-icon" />
           </p>
-          <button className="flex items-center justify-center text-white getStartedBtn">
+          <button
+            onClick={() => navigate("/contact")}
+            className="flex items-center justify-center text-white getStartedBtn"
+          >
             Get Started
           </button>
         </div>
@@ -154,11 +159,15 @@ export default function HomePage() {
       </section>
       <section className="container businessLeaderSection">
         <h2>Business Leaders Count on Juiceme</h2>
-        <div className="flex gap-12 justify-center flex-wrap">{leaderCountContent.map(({ title, subtext, img }) => <div className="card" key={title}>
-          <h3>{title}</h3>
-          <p>{subtext}</p>
-          <img src={img} alt={title} />
-        </div>)}</div>
+        <div className="flex gap-12 justify-center flex-wrap">
+          {leaderCountContent.map(({ title, subtext, img }) => (
+            <div className="card" key={title}>
+              <h3>{title}</h3>
+              <p>{subtext}</p>
+              <img src={img} alt={title} />
+            </div>
+          ))}
+        </div>
       </section>
       <div className="container justify-center flex flex-wrap statsContainer">
         {stats.map(({ figure, subtext }) => (

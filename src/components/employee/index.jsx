@@ -2,6 +2,7 @@ import HeroImage from "../../assets/employee/employee_hero_image.png";
 import JuicemeWallet from "../../assets/employee/juice_chatbot.png";
 import Code from "../../assets/code.svg";
 import Id from "../../assets/id.svg";
+import { useNavigate } from "react-router-dom";
 import Receipt from "../../assets/receipt.svg";
 import Shield from "../../assets/shield.svg";
 import WhatsAppIcon from "../../assets/whatsapp_icon.svg";
@@ -30,6 +31,7 @@ const customerCentric = [
 ];
 
 export default function EmployeePage() {
+  const navigate = useNavigate();
   return (
     <>
       <section className="hero-section container">
@@ -42,20 +44,19 @@ export default function EmployeePage() {
               alt="whatsapp icon"
             />
           </h1>
-          <p className="pt-4 !mb-0">
+          {/* <p className="pt-4 !mb-0">
             The pain of waiting for payday when you’ve already worked hard for
             your money is no more. Using WhatsApp you can now access your
-            earnings on your terms any day before payday. Join us today and take
-            control of your finances.
+            earnings on your terms any day before payday.
+          </p> */}
+          <p className="pt-4">
+            The pain of waiting for payday when you’ve already worked hard for
+            your money is no more. Using WhatsApp you can now turn workdays into
+            paydays—get paid anytime!
           </p>
-          <div className="flex gap-6">
-            <button className="flex items-center justify-center text-white getStartedBtn">
-              Get Started
-            </button>
-            <button className="flex items-center justify-center text-white getStartedBtn referBtn">
-              Refer your employer
-            </button>
-          </div>
+          <button onClick={() => navigate('/contact')} className="flex items-center justify-center text-white getStartedBtn">
+            Refer your employer
+          </button>
         </div>
         <div className="intro-img">
           <img src={HeroImage} alt="header-image" />

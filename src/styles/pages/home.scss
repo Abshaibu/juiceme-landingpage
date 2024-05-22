@@ -17,7 +17,7 @@
 }
 
 .hero-section {
-    padding: 6em 0 10em;
+    padding: 10em 0 7em;
     display: flex;
     gap: 3em;
     align-items: center;
@@ -122,7 +122,7 @@
 }
 
 .addonSection {
-    margin-top: 10em;
+    margin-top: 7em;
 
     p {
         margin: 0 auto;
@@ -171,9 +171,9 @@
 }
 
 .businessLeaderSection {
-    margin-top: 12em;
+    margin-top: 8em;
     h2 {
-        margin-bottom: 8em;
+        margin-bottom: 7em;
     }
     .card {
         padding: 2.5em;
@@ -204,7 +204,7 @@
 
     @media (max-width: 1023px) {
         h2 {
-            margin-bottom: 2em;
+            margin-bottom: 1.5em;
         }
         .card {
             transform: unset !important;
@@ -215,11 +215,11 @@
 }
 
 .statsContainer {
-    margin: 15em auto 8em;
+    margin: 12em auto 8em;
     gap: 7em;
     row-gap: 5em;
     @media (max-width: 1023px) {
-           margin: 10em auto 8em;
+           margin: 7em auto 8em;
         }
     div {
         width: 14.75rem;

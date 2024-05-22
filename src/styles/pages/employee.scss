@@ -1,5 +1,4 @@
 .hero-section {
-    margin-bottom: 5em;
     button {
         &.referBtn {
             border: 1px solid $primary;
@@ -17,7 +16,7 @@
     background: url('./../assets/rose-petals-small.svg') no-repeat center;
         background-size: cover;
         background-position: center 1em;
-        margin: 0 auto 15em;
+        margin: 0 auto 10em;
         padding-top: 9em;
 
         h2 {

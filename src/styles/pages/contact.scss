@@ -1,10 +1,13 @@
 .contactUsSection {
-    padding: 7em 0;
+    padding: 10em 0 5em;
     h1 {
         font-size: clamp(2rem, 6vw, 3rem);
         color: #000;
+        max-width: 42rem;
+        margin-bottom: 1em;
+        width: 100%;
         line-height: 130%;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: -0.06em;
     }
 
@@ -77,6 +80,9 @@
             }
         }
         @media (max-width: 1115px) {
-            flex-direction: column;
+            div.flex-wrap-reverse {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
         }
 }

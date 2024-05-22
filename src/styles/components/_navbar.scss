@@ -53,6 +53,9 @@ header {
                         position: absolute;
                         right: 0;
                         }
+                        img {
+                            width: 21px;
+                        }
                     }
                 }
 
@@ -76,8 +79,8 @@ header {
     }
 
     @media (max-width: 767px) {
-        button.hidden {
-            display: inline-block;
+        .mobileRightBtns {
+            display: flex;
         }
 
         nav, ul {
@@ -95,10 +98,19 @@ header {
             width: 100%;
             &.showNav {
                 top: 4em;
+                height: 100vh;
+                gap: 1em;
+            }
+
+            ul {
+                border-bottom: 2px solid #DADADA;
+                width: 90%;
+                margin: 0 auto;
+                padding-bottom: 1em;
             }
         }
 
-        div.relative {
+        div.desktopRightBtnContainer {
             display: none !important;
         }
 

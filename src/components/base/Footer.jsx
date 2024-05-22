@@ -1,4 +1,5 @@
-import Logo4XL from '../../assets/juice_me_footer_logo.svg'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Flag1 from '../../assets/flag_1.svg'
 import Flag2 from '../../assets/flag_2.svg'
 import Flag3 from '../../assets/flag_3.svg'
@@ -38,17 +39,10 @@ const footerLinks = [
   {
     title: "legal",
     links: [
-      { href: "terms", name: "terms & conditions" },
-      { href: "privacy", name: "privacy policy" },
+      { href: "#", name: "terms & conditions" },
+      { href: "#", name: "privacy policy" },
     ],
   },
-];
-
-const countries = [
-  { countryName: "Nigeria", flag: Flag4 },
-  { countryName: "Eswatini", flag: Flag1, comingSoon: true },
-  { countryName: "Uganda", flag: Flag2, comingSoon: true },
-  { countryName: "Usa", flag: Flag3, comingSoon: true },
 ];
 
 export default function Foooter() {
@@ -74,7 +68,9 @@ export default function Foooter() {
                 <ul>
                   {links?.map(({ href, name }) => (
                     <li key={name}>
-                      <a href={href}>{name}</a>
+                      <Link to={`/${href}`}>
+                        {name}
+                      </Link>
                     </li>
                   ))}
                   {countries?.map(({ countryName, flag }) => (
