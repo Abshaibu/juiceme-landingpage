@@ -198,7 +198,7 @@ export default function EmployerPage() {
               Unlock the power of employee’s favourite app and digitalize their
               HR and Payroll processes:
             </p>
-            <ul className="flex gap-4 flex-wrap">
+            <ul className="flex gap-[1.5rem] gap-y-12 flex-wrap justify-center">
               {moreFromJuiceme.map(({ icon, heading, text }) => (
                 <li key={heading}>
                   <span>

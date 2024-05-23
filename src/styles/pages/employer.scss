@@ -111,6 +111,11 @@
         @media (max-width: 1265px) {
             justify-content: center;
             gap: 4rem;
+
+            li {
+                min-width: 11.125rem;
+                    max-width: 15rem;
+            }
         }
     }
 }
