@@ -59,7 +59,7 @@ export default function ContactPage() {
               ></textarea>
             </label>
             <button
-              className="getStartedBtn text-white block mt-12 ml-auto"
+              className="getStartedBtn text-white block mt-12 mx-auto"
               type="submit"
             >
               Submit

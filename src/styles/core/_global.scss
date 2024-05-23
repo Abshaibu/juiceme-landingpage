@@ -232,7 +232,9 @@ main{
 .values {
   li{
     border-radius: 8px;
-    width: 17.75rem;
+    max-width: 17.75rem;
+    flex: 1;
+    min-width: 16.75rem;
     background: #fff;
     padding: 2em 1.5em;
     box-shadow: 4px 4px 70px 0px #35353514;

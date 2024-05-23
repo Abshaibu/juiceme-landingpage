@@ -64,8 +64,8 @@ export default function EmployeePage() {
       </section>
       <section className="overdraftSection">
         <div className="container">
-          <h2>No more overdraft fees, late bills, & payday loans.</h2>
-          <p>
+          <h2 className="max-w-[30rem]">No more overdraft fees, late bills, & payday loans.</h2>
+          <p className="my-[1.5em] mx-auto text-center">
             Your employer’s partnership with Juiceme ensures your financial
             security. It is not a loan so there is no interest. We will only
             charge a once-off withdrawal fee.
@@ -130,7 +130,7 @@ export default function EmployeePage() {
               />
             </label>
             <button
-              className="getStartedBtn text-white block ml-auto"
+              className="getStartedBtn text-white block mx-auto"
               type="submit"
             >
               Submit

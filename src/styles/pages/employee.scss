@@ -16,21 +16,18 @@
     background: url('./../assets/rose-petals-small.svg') no-repeat center;
         background-size: cover;
         background-position: center 1em;
-        margin: 0 auto 10em;
+        margin: 0 auto 7em;
         padding-top: 9em;
 
         h2 {
             text-align: center;
-            max-width: 30rem;
             width: 100%;
             margin: 0 auto;
         }
         p {
-            text-align: center;
                 max-width: 40rem;
                 font-size: 1.125rem;
                 width: 100%;
-                margin: 1.5em auto;
         }
 }
 
@@ -74,7 +71,7 @@
             flex-direction: column;
 
             ul {
-                margin-bottom: 12em;
+                margin-bottom: 9em;
             }
 
             .walletImg {
@@ -91,7 +88,7 @@
     padding: 2.06rem;
     max-width: 36.5rem;
     width: 100%;
-    margin: 10em auto;
+    margin: 7em auto;
     box-shadow: 4px 4px 70px 0px #FC7D4A1A;
     h2 {
         margin-bottom: 0.4em;

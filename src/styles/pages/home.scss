@@ -17,12 +17,12 @@
 }
 
 .hero-section {
-    padding: 10em 0 7em;
+    padding: 10em 0 4em;
     display: flex;
-    gap: 3em;
+    gap: 7vw;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
     .intro-texts {
         max-width: 35rem;
@@ -216,13 +216,14 @@
 
 .statsContainer {
     margin: 12em auto 8em;
-    gap: 7em;
+    gap: 6%;
     row-gap: 5em;
     @media (max-width: 1023px) {
            margin: 7em auto 8em;
         }
     div {
-        width: 14.75rem;
+        max-width: 14.75rem;
+        min-width: 13.75rem;
     }
     p{
         text-align: center;

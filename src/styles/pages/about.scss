@@ -1,7 +1,7 @@
 .hero-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     .intro-texts {
         max-width: 31.187rem;
@@ -44,20 +44,19 @@
 }
 
 .landscapeSection {
-    margin: 3em auto 12em;
+    margin: 3em auto 4em;
 
     li {
         flex-direction: column;
-        max-width: 15rem;
+        max-width: 17rem;
+        flex: 1;
+        min-width: 16rem;
     }
     span {
-        width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 50%;
-            background: #FEEBE3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: inline-block;
+            color: #000;
+            font-weight: 700;
+            font-size: 2.4rem;
     }
 }
 
@@ -65,7 +64,7 @@
     background: url('./../assets/rose-petals-small.svg') no-repeat center;
     background-size: cover;
     background-position: center;
-    margin: 0 0 15em;
+    margin: 0 0 10em;
     padding-top: 5em;
     h2 {
         max-width: 50rem;

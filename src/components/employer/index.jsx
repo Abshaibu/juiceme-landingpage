@@ -115,13 +115,19 @@ export default function EmployerPage() {
       </section>
       <section className="overdraftSection">
         <div className="container">
-          <h2>We are working with partners across different industries</h2>
+          <h2 className="max-w-[40rem]">
+            We are working with partners across different industries
+          </h2>
           <Industires />
         </div>
       </section>
       <section className="ewa container">
         <div>
-          <img className="max-w-[32.5rem] w-full" src={Ewa} alt="payday image" />
+          <img
+            className="max-w-[20.5rem] w-full"
+            src={Ewa}
+            alt="payday image"
+          />
         </div>
         <div className="ewaTexts">
           <h2>What is Earned Wage Access?</h2>
@@ -133,22 +139,22 @@ export default function EmployerPage() {
             financial products, ensuring financial stability and enhancing
             workplace performance.
           </p>
-          <div>
-            <h3>
-              Offering earned wage access to your employees using Juiceme
-              technology is super easy:
-            </h3>
-            <ul className="flex gap-8 flex-wrap">
-              {offerings.map(({ text, icon }) => (
-                <li key={text}>
-                  <span>{<img src={icon} alt={text} />}</span>
-                  <p>{text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
+      <div className="container !my-32">
+        <h3 className="max-w-[50rem] w-full mx-auto text-center mb-8">
+          Offering earned wage access to your employees using Juiceme technology
+          is super easy:
+        </h3>
+        <ul className="flex gap-8 flex-wrap justify-center">
+          {offerings.map(({ text, icon }) => (
+            <li className="w-[10rem] flex flex-col items-center" key={text}>
+              <span>{<img src={icon} alt={text} />}</span>
+              <p className="text-center">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="container">
         <Values values={values} title="How Earned Wage Access Works" />
       </div>
@@ -211,7 +217,7 @@ export default function EmployerPage() {
       <section className="container testimonialsSection">
         <label className="sectionLabel">testimonials</label>
         <h2>Here is what industries say about us</h2>
-        <ul className="flex gap-8 flex-wrap">
+        <ul className="flex gap-4 flex-wrap">
           {testimonials.map(({ testifier, icon, text }) => (
             <li key={text}>
               <img src={Quote} alt="quote" />
