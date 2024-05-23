@@ -23,8 +23,8 @@ const footerLinks = [
   {
     title: "contact",
     links: [
-      { href: "email", name: "Email: hello@juiceme.io" },
-      { href: "phone", name: "Phone: +256 741 657 535" },
+      { href: "email", name: "Email: hello@juiceme.io", email: 'hello@juiceme.io' },
+      { href: "phone", name: "Phone: +256 741 657 535", number: '+256 741 657 535' },
     ],
   },
   {
@@ -33,7 +33,7 @@ const footerLinks = [
       { countryName: "Nigeria", flag: Flag4 },
       { countryName: "Eswatini", flag: Flag1, comingSoon: true },
       { countryName: "Uganda", flag: Flag2, comingSoon: true },
-      { countryName: "Usa", flag: Flag3, comingSoon: true },
+      { countryName: "USA", flag: Flag3, comingSoon: true },
     ],
   },
   {
@@ -66,9 +66,17 @@ export default function Foooter() {
               <div key={title}>
                 <h5>{title}</h5>
                 <ul>
-                  {links?.map(({ href, name }) => (
+                  {links?.map(({ href, name, email, number }) => (
                     <li key={name}>
-                      <Link to={`/${href}`}>
+                      <Link
+                        to={
+                          href === "email"
+                            ? `mailto:${email}`
+                            : href === "phone"
+                            ? `tel:${number}`
+                            : `/${href}`
+                        }
+                      >
                         {name}
                       </Link>
                     </li>

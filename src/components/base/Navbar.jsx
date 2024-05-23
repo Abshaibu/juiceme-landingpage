@@ -12,7 +12,7 @@ const countries = [
   { title: "Nigeria", flag: Flag4 },
   { title: "Eswatini", flag: Flag1, comingSoon: true },
   { title: "Uganda", flag: Flag2, comingSoon: true },
-  { title: "Usa", flag: Flag3, comingSoon: true }
+  { title: "USA", flag: Flag3, comingSoon: true }
 ];
 
 const headerLinks = ['employer', 'employee', 'about']
