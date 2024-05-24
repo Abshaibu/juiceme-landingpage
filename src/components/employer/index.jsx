@@ -47,9 +47,9 @@ const values = [
 ];
 
 const offerings = [
-  { icon: SendSlip, text: "No changes in your payroll system" },
+  { icon: SendSlip, text: "No changes to your payroll system" },
   { icon: NoCash, text: "No cost to the employer" },
-  { icon: Cash, text: "No impact in your cashflow" },
+  { icon: Cash, text: "No impact to your cashflow" },
 ];
 
 const moreFromJuiceme = [
@@ -98,7 +98,7 @@ export default function EmployerPage() {
     <>
       <section className="hero-section container">
         <div className="intro-texts">
-          <h1>Be the company where people want to work.</h1>
+          <h1>Attract Top Talent to Your Team.</h1>
           <p className="pt-4 !mb-0">
             When employees are financially unwell, productivity, engagement and
             retention suffer—and so does your business. Juiceme takes the
@@ -115,9 +115,7 @@ export default function EmployerPage() {
       </section>
       <section className="overdraftSection">
         <div className="container">
-          <h2 className="max-w-[40rem]">
-            We are working with partners across different industries
-          </h2>
+          <h2 className="max-w-[40rem]">Industries We Serve</h2>
           <Industires />
         </div>
       </section>
@@ -195,8 +193,8 @@ export default function EmployerPage() {
           <div className="texts">
             <h2>There is more from the Juiceme Portal for companies</h2>
             <p className="mb-8">
-              Unlock the power of employee’s favourite app and digitalize their
-              HR and Payroll processes:
+              Discover More with the Juiceme Portal. Empower Your Workforce and
+              Streamline HR and Payroll Processes.
             </p>
             <ul className="flex gap-[1.5rem] gap-y-12 flex-wrap justify-center">
               {moreFromJuiceme.map(({ icon, heading, text }) => (
@@ -219,9 +217,11 @@ export default function EmployerPage() {
         <h2>Here is what industries say about us</h2>
         <ul className="flex gap-4 flex-wrap">
           {testimonials.map(({ testifier, icon, text }) => (
-            <li key={text}>
-              <img src={Quote} alt="quote" />
-              <p className="mt-6 mb-16">"{text}"</p>
+            <li className="flex flex-col justify-between" key={text}>
+              <div>
+                <img src={Quote} alt="quote" />
+                <p className="mt-6 mb-16">"{text}"</p>
+              </div>
               <div className="flex gap-3 items-center">
                 <span>
                   <img src={icon} alt={testifier} />

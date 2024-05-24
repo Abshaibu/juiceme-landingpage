@@ -216,15 +216,9 @@
 
 .statsContainer {
     margin: 12em auto 8em;
-    gap: 6%;
-    row-gap: 5em;
     @media (max-width: 1023px) {
            margin: 7em auto 8em;
         }
-    div {
-        max-width: 14.75rem;
-        min-width: 13.75rem;
-    }
     p{
         text-align: center;
         &:first-child {

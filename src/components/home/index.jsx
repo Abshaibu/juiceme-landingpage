@@ -86,7 +86,8 @@ export default function HomePage() {
       <section className="hero-section container">
         <div className="intro-texts">
           <h1>
-            Do not wait for <span className="">payday</span>. Turn workdays into paydays - get paid anytime!
+            Do not wait for <span className="">payday</span>. Turn workdays into
+            paydays - get paid anytime!
             <span className="hidden">Track time attendance</span>
             <span className="hidden">Process pay slips</span>
             <span className="hidden">Send critical information</span>
@@ -112,13 +113,12 @@ export default function HomePage() {
         <div className="container">
           <div className="textsContainer">
             <label className="sectionLabel">juiceme platform</label>
-            <h2>Redefining the Employer-Employee Relationship</h2>
+            <h2>Redefining the Employer Employee Relationship</h2>
             <p>
-              Employees now have the opportunity to choose when and how they
-              receive their pay with Juiceme’s Earned Wage Access. No effort is
-              required from employers. When payday becomes any day, workers gain
-              the financial flexibility to manage unforeseen expenses
-              effectively.{" "}
+              With Juiceme’s Earned Wage Access, employees can now choose when
+              and how they receive their pay, giving them the financial
+              flexibility to manage unforseen expenses effectively. No
+              additional effort is required from them.
             </p>
             <button
               className="flex items-center justify-center text-white getStartedBtn"
@@ -133,8 +133,19 @@ export default function HomePage() {
         </div>
       </section>
       <Industries heading={true} />
+      <div className="container statsContainer">
+        <label className="sectionLabel mb-12">Juiceme by the numbers</label>
+        <div className="justify-center flex flex-wrap gap-[6%] gap-y-[5em]">
+          {stats.map(({ figure, subtext }) => (
+            <div className="max-w-[14.75rem] min-w-[13.75rem]" key={subtext}>
+              <p>{figure}</p>
+              <p>{subtext}</p>
+            </div>
+          ))}
+        </div>
+      </div>
       <section className="container addonSection">
-        <label className="sectionLabel">a software addon-on</label>
+        <label className="sectionLabel">a software add-on</label>
         <h2>Works with all HR and Payroll System</h2>
         <p>
           Juiceme is an HR & Payroll add-on, compatible with any system to
@@ -169,14 +180,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <div className="container justify-center flex flex-wrap statsContainer">
-        {stats.map(({ figure, subtext }) => (
-          <div key={subtext}>
-            <p>{figure}</p>
-            <p>{subtext}</p>
-          </div>
-        ))}
-      </div>
     </>
   );
 }

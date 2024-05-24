@@ -37,18 +37,8 @@ export default function EmployeePage() {
       <section className="hero-section container">
         <div className="intro-texts">
           <h1>
-            You worked, you get paid on your terms with Juiceme via WhatsApp{" "}
-            <img
-              className="inline-block ml-2"
-              src={WhatsAppIcon}
-              alt="whatsapp icon"
-            />
+            Get Paid on Your Terms, When You Want.
           </h1>
-          {/* <p className="pt-4 !mb-0">
-            The pain of waiting for payday when you’ve already worked hard for
-            your money is no more. Using WhatsApp you can now access your
-            earnings on your terms any day before payday.
-          </p> */}
           <p className="pt-4">
             The pain of waiting for payday when you’ve already worked hard for
             your money is no more. Using WhatsApp you can now turn workdays into
