@@ -158,7 +158,7 @@ export default function EmployerPage() {
       </div>
       <section className="container juicePortal">
         <label className="text-[#FC6326] text-[1.125rem] mb-3 font-[500] inline-block">
-          The Juice Portal
+          The Juiceme Portal
         </label>
         <div className="flex gap-8 flex-wrap flexContainerOne justify-between">
           <div className="texts">
