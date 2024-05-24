@@ -135,7 +135,7 @@ export default function HomePage() {
       <Industries heading={true} />
       <div className="container statsContainer">
         <label className="sectionLabel mb-12">Juiceme by the numbers</label>
-        <div className="justify-center flex flex-wrap gap-[6%] gap-y-[5em]">
+        <div className="justify-center flex flex-wrap gap-[6%] gap-y-[2em]">
           {stats.map(({ figure, subtext }) => (
             <div className="max-w-[14.75rem] min-w-[13.75rem]" key={subtext}>
               <p>{figure}</p>

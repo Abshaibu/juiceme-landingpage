@@ -4,8 +4,9 @@
             border: 1px solid $primary;
             background: #fff !important;
             color: $primary;
-            &:hover {
+            &:hover, &:focus {
             background: $primary !important;
+            outline: none;
             color: #fff;
             }
         }
@@ -120,6 +121,7 @@
                 margin-top: 0.4em;
                 &:hover, &:focus {
                     border-color: $primary;
+                    outline: none;
                 }
             }
         }

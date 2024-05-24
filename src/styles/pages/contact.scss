@@ -71,6 +71,7 @@
                     &:hover,
                     &:focus {
                         border-color: $primary;
+                        outline: none;
                     }
                 }
 

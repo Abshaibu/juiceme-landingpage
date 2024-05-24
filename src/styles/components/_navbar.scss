@@ -22,6 +22,7 @@ header {
 
             &.active, &:hover, &:focus {
                 color: $orange;
+                outline: none;
             }
         }
 
@@ -74,6 +75,7 @@ header {
             transition: all 0.25s ease;
             &:hover, &:focus {
                 border: 1px solid $orange;
+                outline: none;
             }
         }
     }
@@ -148,8 +150,9 @@ footer {
         color: #fff;
         font-size: 0.875rem;
         text-transform: capitalize;
-        &:hover {
+        &:hover, &:focus {
             text-decoration: underline;
+            outline: none;
         }
     }
 

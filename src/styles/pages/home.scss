@@ -11,8 +11,9 @@
     font-weight: 600;
     padding: 1.25em 0;
     transition: all 0.35s ease;
-    &:hover {
+    &:hover, &:focus {
         background: $orange !important;
+        outline: none;
     }
 }
 
@@ -30,7 +31,6 @@
                 font-size: 3.375rem;
                 font-weight: 700;
                 line-height: 130%;
-                // letter-spacing: -3.24px;
             }
         
         span {
@@ -171,7 +171,7 @@
 }
 
 .businessLeaderSection {
-    margin-top: 8em;
+    margin: 8em auto 10em;
     h2 {
         margin-bottom: 7em;
     }
@@ -203,6 +203,7 @@
     }
 
     @media (max-width: 1023px) {
+        margin-bottom: 5em;
         h2 {
             margin-bottom: 1.5em;
         }

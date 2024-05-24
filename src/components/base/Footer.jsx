@@ -54,7 +54,7 @@ export default function Foooter() {
           <p className="text-white my-3 text-center mb-5">
             Grow your business and become a truly employee centric organization.
           </p>
-          <button className="py-[1.25em] block w-[11.5rem] font-[600] text-[0.875rem] bg-white hover:bg-primary hover:text-white rounded-[10px] mx-auto">
+          <button className="py-[1.25em] block w-[11.5rem] font-[600] text-[0.875rem] bg-white hover:bg-primary focus:bg-primary focus:outline-none focus:text-white hover:text-white rounded-[10px] mx-auto">
             Book a demo
           </button>
         </div>
