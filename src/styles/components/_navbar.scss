@@ -179,7 +179,6 @@ footer {
         }
 
                 @media (max-width: 767px) {
-                    min-height: 33rem;
                     .innerContainer {
                         flex-wrap: wrap;
                         gap: 2em;
@@ -189,4 +188,8 @@ footer {
                             }
                     }
                 }
+
+                                @media (max-width: 714px) {
+                                    min-height: 33rem;
+                                }
 }

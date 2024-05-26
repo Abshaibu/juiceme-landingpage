@@ -1,5 +1,10 @@
 import React, {useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import AboutPage from "./components/about";
 import ContactPage from "./components/contact";
 import EmployeePage from "./components/employee";
