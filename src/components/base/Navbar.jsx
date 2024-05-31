@@ -10,9 +10,9 @@ import { useEffect, useState, useCallback } from 'react'
 
 const countries = [
   { title: "Nigeria", flag: Flag4 },
-  { title: "Eswatini", flag: Flag1, comingSoon: true },
-  { title: "Uganda", flag: Flag2, comingSoon: true },
-  { title: "USA", flag: Flag3, comingSoon: true }
+  { title: "Eswatini", flag: Flag1 },
+  { title: "Uganda", flag: Flag2 },
+  { title: "USA", flag: Flag3}
 ];
 
 const headerLinks = ['employer', 'employee', 'about']
