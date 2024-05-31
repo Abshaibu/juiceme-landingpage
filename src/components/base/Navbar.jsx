@@ -62,7 +62,7 @@ export default function Navbar() {
           to="/"
         >
           {" "}
-          <img src={Logo} alt="logo" />
+          <img width="104px" src={Logo} alt="logo" />
         </Link>
         <nav
           className={showMobileNav ? "showNav" : null}

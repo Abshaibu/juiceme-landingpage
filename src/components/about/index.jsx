@@ -62,12 +62,12 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  { name: "Sandile Dlamini", role: "Founder, CEO", img: Team1 },
-  { name: "Sandile Dlamini", role: "Chief Operations Officer", img: Team2 },
-  { name: "Sandile Dlamini", role: "Advisor, HR", img: Team3 },
-  { name: "Sandile Dlamini", role: "Advisor, Finance", img: Team4 },
-];
+// const teamMembers = [
+//   { name: "Sandile Dlamini", role: "Founder, CEO", img: Team1 },
+//   { name: "Sandile Dlamini", role: "Chief Operations Officer", img: Team2 },
+//   { name: "Sandile Dlamini", role: "Advisor, HR", img: Team3 },
+//   { name: "Sandile Dlamini", role: "Advisor, Finance", img: Team4 },
+// ];
 
 export default function AboutPage() {
   const navigate = useNavigate();
@@ -132,7 +132,7 @@ export default function AboutPage() {
           <Values values={values} title="Our values" />
         </div>
       </section>
-      <section className="container ">
+      {/* <section className="container ">
         <h2 className='mb-8'>Our Team</h2>
         <ul className="flex gap-4 flex-wrap justify-center mb-32 gap-y-8">
           {teamMembers.map(({ name, role, img }) => (
@@ -146,7 +146,7 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </>
   );
 }
