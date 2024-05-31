@@ -29,10 +29,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/employer" element={<EmployerPage />} />
-          <Route path="/employee" element={<EmployeePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="employer" element={<EmployerPage />} />
+          <Route path="employee" element={<EmployeePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Routes>
       </Layout>
     </Router>
