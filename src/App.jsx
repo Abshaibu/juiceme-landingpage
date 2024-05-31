@@ -1,5 +1,10 @@
 import React, {useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import AboutPage from "./components/about";
 import ContactPage from "./components/contact";
 import EmployeePage from "./components/employee";
@@ -24,10 +29,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/employer" element={<EmployerPage />} />
-          <Route path="/employee" element={<EmployeePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="employer" element={<EmployerPage />} />
+          <Route path="employee" element={<EmployeePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Routes>
       </Layout>
     </Router>
